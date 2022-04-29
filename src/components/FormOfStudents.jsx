@@ -11,6 +11,9 @@ const FormOfStudents = () => {
         lastName
       }
       setList([...list, student])
+      document.getElementById("student-form").reset();
+      setName("")
+      setLastName("")
     } 
   }
 
@@ -31,7 +34,7 @@ const FormOfStudents = () => {
   return (
     <div>
       <h1>Add a student</h1>
-      <form >
+      <form id="student-form">
         <label>Name</label>
         <input onChange={addName} type="text" name="name" />
         <label>Last name</label>
