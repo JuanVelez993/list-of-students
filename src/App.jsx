@@ -2,7 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import FormOfStudents from './components/FormOfStudents'
-import ListOfStudents from './components/ListOfStudents'
+
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div>
       <h1>My first application</h1>
       <FormOfStudents />
-      <ListOfStudents />
+      
     </div>
   )
 }

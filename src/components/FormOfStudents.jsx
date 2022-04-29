@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ListOfStudents from './ListOfStudents'
 
 const FormOfStudents = () => {
 
@@ -30,16 +31,13 @@ const FormOfStudents = () => {
   return (
     <div>
       <h1>Add a student</h1>
-      <form>
+      <form >
         <label>Name</label>
         <input onChange={addName} type="text" name="name" />
         <label>Last name</label>
         <input onChange={addLastName}  type="text" name="lastName" />
         <button onClick={onAddStudent}>add student</button>
-        {list.map((student, index) => <div key={index}>
-          <h2>{student.name}</h2>
-          <h2>{student.lastName}</h2>
-        </div>)}
+        <ListOfStudents list={list} setList={setList}/> 
       </form>
     </div>
   )
